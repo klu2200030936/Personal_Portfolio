@@ -1,0 +1,188 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5em; /* Increased font size for header */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+header p {
+    font-style: italic;
+}
+
+header h1:hover {
+    color: #f0f0f0; /* Change text color on hover */
+}
+
+section {
+    margin: 40px 0;
+}
+
+section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    position: relative; /* Position for animations */
+    animation: slideInLeft 1s forwards; /* Slide in animation */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+section h2:hover {
+    color: #333; /* Change text color on hover */
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+img {
+    max-width: 150px; /* Set max width for square photo */
+    height: auto;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow effect */
+    transition: transform 0.3s ease-in-out; /* Smooth image scaling */
+    float: left; /* Float image to the left of text */
+    margin-right: 20px; /* Margin between image and text */
+}
+
+img:hover {
+    transform: scale(1.1); /* Scale up image on hover */
+}
+
+ul {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+.project {
+    margin-bottom: 20px;
+    overflow: hidden; /* Prevents overflow issues with animations */
+}
+
+.project h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em; /* Increased font size for project titles */
+    color: #333; /* Darker color for titles */
+    animation: fadeIn 1s forwards; /* Fade in animation */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.project h3:hover {
+    color: #666; /* Change text color on hover */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    animation: slideInUp 1s forwards; /* Slide up animation */
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CSS for Contact Section */
+#contact {
+    position: fixed; /* Fixed positioning */
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 1000; /* Ensures it appears above other content */
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#contact .container {
+    max-width: none; /* Override max-width for contact section */
+}
+
+#contact h2 {
+    color: #fff; /* White text color */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#contact .contact-details {
+    color: #fff; /* White text color */
+}
+
+#contact .contact-details p {
+    margin: 5px 0;
+}
+
+/* Adjustments for small screens */
+@media (max-width: 768px) {
+    #contact {
+        top: auto;
+        bottom: 20px; /* Move to bottom for small screens */
+        right: 20px;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-image {
+        margin-bottom: 20px; /* Add margin below image on small screens */
+    }
+
+    img {
+        float: none; /* Center image on small screens */
+        margin: 0 auto 20px; /* Center-align and add margin */
+        display: block; /* Ensure image is block-level */
+    }
+}
